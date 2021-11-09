@@ -3,7 +3,7 @@ CFLAGS=-Wall -static-libgcc
 LIBS=-lssh -ljson-c
 
 RSA=/etc/ssh-honeypot/ssh-honeypot.rsa
-
+all: ssh-honeypot
 ssh-honeypot:
 	$(CC) $(CFLAGS) -o bin/ssh-honeypot src/ssh-honeypot.c $(LIBS)
 
