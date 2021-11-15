@@ -6,8 +6,8 @@ services:
     ports:
       - '22:2022'
     volumes:
-      - log:/home/honeycomb/log
-      - rsa:/home/honeycomb/rsa     
+      - /var/log/serverlogs/ssh-log:/home/honeycomb/log
+      - /var/log/serverlogs/ssh-rsa:/home/honeycomb/rsa     
     networks:
       default: 
     restart: unless-stopped
